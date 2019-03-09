@@ -55,11 +55,11 @@ public class LnkdList {
             return false;
         }
         if (start.getValue().equals(object)) {
-            start.setNext(start.getNext());
+            head.setNext(start.getNext());
             --size;
             return true;
         }
-        while (start.getNext() != null) {
+        while (start.getNext().getValue() != null) {
             if (start.getNext().getValue().equals(object)) {
                 start.setNext(start.getNext().getNext());
                 --size;
@@ -87,7 +87,7 @@ public class LnkdList {
      * @throws IndexOutOfBoundsException when there is no node with such index.
      */
     private Node searchForNode(int index) throws IndexOutOfBoundsException {
-        if (index < 0 || index > size) {
+        if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
         Node search = head.getNext();

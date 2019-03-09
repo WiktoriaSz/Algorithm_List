@@ -1,6 +1,7 @@
 package exercise.com;
 
-public class Main {
+public class LnkdListTest {
+
     public static void main(String[] args) {
 
         LnkdList list = new LnkdList();
@@ -16,6 +17,8 @@ public class Main {
         System.out.println("Size of the list after delete = " + list.size());
         list.clear();
         System.out.println("Size of the list after clear = " + list.size());
+        System.out.println(list.delete("w"));
+
 
     }
 }
